@@ -22,6 +22,11 @@ module.exports = function (rawBoardBuffer, rawTargetBuffer) {
         let x = n % 1000
         let y = Math.floor(n / 1000)
         let color = colors.byInt.indexOf(val)
+
+        if (color === -1) {
+          console.log("Color not found");
+          console.log(val);
+        }
         return { x: x, y: y, color: color }
       }
     }
