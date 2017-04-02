@@ -30,7 +30,7 @@ module.exports = function (rawBoardBuffer, rawTargetBuffer) {
           
           //try to fix it by converting it from bgra to rgba or something
           var tempVal = Jimp.intToRGBA(val);
-          val = Jimp.rgbaToInt(val.b, val.g, val.r, 255);
+          val = Jimp.rgbaToInt(tempVal.b, tempVal.g, tempVal.r, 255);
           color = colors.byInt.indexOf(val)
 
           console.log("Fixed color: " + color)
