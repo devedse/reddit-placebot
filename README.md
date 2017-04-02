@@ -1,7 +1,14 @@
 # Forked by Devedse
 
+Let's add the following Maze to the /r/place board at position 178, 231:
+![Target](logo.png)
+
+
 Adding a maze to the board :), target:
 ![Target](Maze.bmp)
+
+The desired final result would be:
+![FinalResult](FinalResult.png)
 
 ## Installation
 
