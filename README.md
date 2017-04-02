@@ -1,6 +1,6 @@
 # Forked by Devedse
 
-Let's add the following Maze to the /r/place board at position 195, 253:
+Let's add the following Maze to the /r/place board at position 206, 252:
 ![Target](logo.png)
 
 Adding a maze to the board :), target:

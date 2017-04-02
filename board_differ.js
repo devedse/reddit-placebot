@@ -1,5 +1,6 @@
 const bmp = require('bmp-js')
 const colors = require('./colors')
+const Jimp = require('jimp')
 
 // Takes the 2 buffers and returns a valid paint to make
 // the targetBuffer meet the requiremetns
@@ -24,8 +25,26 @@ module.exports = function (rawBoardBuffer, rawTargetBuffer) {
         let color = colors.byInt.indexOf(val)
 
         if (color === -1) {
-          console.log("Color not found");
+          console.log("Color not found, trying to fix it...");
           console.log(val);
+          
+          //try to fix it by converting it from bgra to rgba or something
+          var tempVal = Jimp.intToRGBA(val);
+          val = Jimp.rgbaToInt(val.b, val.g, val.r, 255);
+          color = colors.byInt.indexOf(val)
+
+          console.log("Fixed color: " + color)
+
+          // var blah2 = Jimp.intToRGBA(val);
+          // console.log(blah2.r + ' ' + blah2.g + ' ' + blah2.b + ' ' + blah2.a);
+
+          // console.log('hoi');
+          // for (let gg = 0; gg < 16; gg++) {
+          //   console.log(gg + '  ' + colors.byInt[gg]);
+
+          //   var blah = Jimp.intToRGBA(colors.byInt[gg]);
+          //   console.log(blah.r + ' ' + blah.g + ' ' + blah.b + ' ' + blah.a);
+          // }
         }
         return { x: x, y: y, color: color }
       }
