@@ -1,7 +1,10 @@
 # Forked by Devedse
 
-Let's add the following Maze to the /r/place board at position 206, 252:
+Let's add the following Maze to the /r/place board at position 215, 253:
 ![Target](logo.png)
+
+Link to target:
+[https://www.reddit.com/place?webview=true/#x=215&y=253](https://www.reddit.com/place?webview=true/#x=215&y=253)
 
 Adding a maze to the board :), target:
 ![Target](Maze.bmp)
